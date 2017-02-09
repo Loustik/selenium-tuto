@@ -1,14 +1,11 @@
 package com.nlethellier.sample.selenium;
 
-import java.net.URI;
-
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 public class DummyUnitTest {
-
 
 	public DummyUnitTest() {
 	}
