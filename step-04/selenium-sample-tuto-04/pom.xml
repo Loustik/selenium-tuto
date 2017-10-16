@@ -37,17 +37,17 @@
         </dependency>
 
 		<dependency>
-				<groupId>org.seleniumhq.selenium</groupId>
-				<artifactId>selenium-support</artifactId>
-				<version>${selenium.version}</version>
-				<scope>test</scope>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-support</artifactId>
+			<version>${selenium.version}</version>
+			<scope>test</scope>
 		</dependency>
 
     </dependencies>
     
     
     <properties>
-			<selenium.version>2.48.2</selenium.version>
+			<selenium.version>3.6.0</selenium.version>
     </properties>
 
 
