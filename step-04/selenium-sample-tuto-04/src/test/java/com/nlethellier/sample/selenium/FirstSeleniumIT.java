@@ -20,15 +20,17 @@ public class FirstSeleniumIT extends TestCase{
 		driver = new FirefoxDriver();
 	}
 
+	@Override
+	protected void tearDown() throws Exception {
+		super.tearDown();
+		driver.close();
+	}
+	
+	
 	@Test
 	public void testWeSeeLoremIpsum() {
 		driver.get(website.toString());
 		Assert.assertTrue(driver.getPageSource().contains("Lorem Ipsum"));
 	}
 	
-	@Override
-	protected void tearDown() throws Exception {
-		super.tearDown();
-		driver.close();
-	}
 }
