@@ -48,13 +48,4 @@ public class FirstSeleniumIT extends TestCase{
 		Assert.assertEquals("This is a brand new paragraph", newParagraph.getText());
 	}
 	
-	@Test
-	public void interactWithPage() {
-		driver.get(website.toString());
-		WebElement loremParagraph = driver.findElement(By.id("lorem"));
-		loremParagraph.clear();
-		loremParagraph.sendKeys("New Lorem Ipsum paragraph, edited by Selenium");
-		Assert.assertEquals("New Lorem Ipsum paragraph, edited by Selenium", loremParagraph.getText());
-	}
-	
 }
