@@ -26,12 +26,6 @@ public class FirstSeleniumIT extends TestCase{
 		Assert.assertTrue(driver.getPageSource().contains("Lorem Ipsum"));
 	}
 	
-	@Test
-	public void testShouldFail() {
-		driver.get(website.toString());
-		Assert.assertTrue(driver.getPageSource().contains("This text is not on the page"));
-	}
-	
 	@Override
 	protected void tearDown() throws Exception {
 		super.tearDown();
