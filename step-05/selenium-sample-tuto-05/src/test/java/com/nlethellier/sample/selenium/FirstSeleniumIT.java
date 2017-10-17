@@ -14,7 +14,7 @@ public class FirstSeleniumIT extends AbstractIT {
 	private WebDriver driver;
 
 	@Override
-	protected void setUp() throws Exception { 
+	public void setUp() throws Exception { 
 		super.setUp();
 		website = new URI("http://localhost:8081/selenium-sample-tuto-04");
 		driver = new FirefoxDriver();
