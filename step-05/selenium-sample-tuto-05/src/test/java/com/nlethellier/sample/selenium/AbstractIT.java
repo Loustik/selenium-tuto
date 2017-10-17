@@ -38,7 +38,7 @@ public abstract class AbstractIT extends TestCase {
 	}
 	
 	@Override
-	protected void tearDown() throws Exception {
+	public void tearDown() throws Exception {
 		super.tearDown();
 		getDrv().close();
 	}
