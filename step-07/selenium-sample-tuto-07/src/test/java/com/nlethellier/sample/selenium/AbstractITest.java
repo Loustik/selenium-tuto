@@ -2,7 +2,6 @@ package com.nlethellier.sample.selenium;
 
 import java.net.URI;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -38,7 +37,6 @@ public abstract class AbstractITest extends TestCase {
 		getDrv().get(siteBase.toString());
 	}
 	
-	@After
 	@Override
 	public void tearDown() throws Exception {
 		super.tearDown();
