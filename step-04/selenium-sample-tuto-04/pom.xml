@@ -108,9 +108,8 @@
                     </configuration>
                     <deployables>
                     	<deployable>
-                    		<groupId>com.nlethellier.sample.selenium</groupId>
-						    <artifactId>selenium-sample-tuto-04</artifactId>
-						    <type>war</type>
+                    		<location>${project.build.directory}/${project.build.finalName}${project.packaging}</location>
+						    <pingURL>http://localhost:8081/selenium-sample-tuto-04</pingURL>
                     	</deployable>
                     </deployables>
                 </configuration>
