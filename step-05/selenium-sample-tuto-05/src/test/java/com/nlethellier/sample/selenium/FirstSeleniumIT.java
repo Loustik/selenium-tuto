@@ -33,7 +33,7 @@ public class FirstSeleniumIT extends TestCase{
 		return drv;
 	}
 
-	@Before
+	//@Before
 	@Override
 	public void setUp() throws Exception {
 		super.setUp();
@@ -41,7 +41,7 @@ public class FirstSeleniumIT extends TestCase{
 		getDrv().get(siteBase.toString());
 	}
 	
-	@After
+	//@After
 	@Override
 	public void tearDown() throws Exception {
 		super.tearDown();
