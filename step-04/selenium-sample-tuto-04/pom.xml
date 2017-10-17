@@ -106,6 +106,13 @@
                             <cargo.servlet.port>8081</cargo.servlet.port>
                         </properties>
                     </configuration>
+                    <deployables>
+                    	<deployable>
+                    		<groupId>com.nlethellier.sample.selenium</groupId>
+						    <artifactId>selenium-sample-tuto-04</artifactId>
+						    <type>war</type>
+                    	</deployable>
+                    </deployables>
                 </configuration>
             </plugin>
 
