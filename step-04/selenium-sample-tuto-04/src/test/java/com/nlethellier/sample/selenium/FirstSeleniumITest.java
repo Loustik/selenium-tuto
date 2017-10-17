@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.GeckoDriverService;
 
-public class FirstSeleniumIT extends TestCase{
+public class FirstSeleniumITest extends TestCase{
 	private URI website;
 	private WebDriver driver;
 
