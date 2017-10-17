@@ -14,7 +14,7 @@ import junit.framework.TestCase;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "/applicationContext-test.xml" })
-public abstract class AbstractIT extends TestCase {
+public abstract class AbstractITest extends TestCase {
 
 	@Autowired
 	private URI siteBase;
