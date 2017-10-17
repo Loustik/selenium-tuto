@@ -1,20 +1,23 @@
 package com.nlethellier.sample.selenium;
 
 import java.net.URI;
+import junit.framework.TestCase;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import junit.framework.TestCase;
-
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "/applicationContext-test.xml" })
-public abstract class AbstractIT extends TestCase {
+public class FirstSeleniumIT extends TestCase{
 
 	@Autowired
 	private URI siteBase;
@@ -44,4 +47,25 @@ public abstract class AbstractIT extends TestCase {
 		super.tearDown();
 		getDrv().close();
 	}
+	
+	
+	@Test
+	public void testWeSeeLoremIpsum() {
+		getDrv().get(getSiteBase().toString());
+		Assert.assertTrue(getDrv().getPageSource().contains("Lorem Ipsum"));
+	}
+	
+	@Test
+	public void testPageTitle() {
+		getDrv().get(getSiteBase().toString());
+		Assert.assertEquals("Selenium sample tuto", getDrv().getTitle());
+	}
+	
+	@Test
+	public void testGetElementById() {
+		getDrv().get(getSiteBase().toString());
+		WebElement newParagraph = getDrv().findElement(By.id("new_paragraph"));
+		Assert.assertEquals("This is a brand new paragraph", newParagraph.getText());
+	}
+	
 }

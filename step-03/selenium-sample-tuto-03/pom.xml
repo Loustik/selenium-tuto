@@ -6,6 +6,7 @@
     <artifactId>selenium-sample-tuto-03</artifactId>
     <packaging>war</packaging>
     <version>1.0.0-SNAPSHOT</version>
+    <name>Selenium Dojo</name>
 
     <dependencies>
         <dependency>
