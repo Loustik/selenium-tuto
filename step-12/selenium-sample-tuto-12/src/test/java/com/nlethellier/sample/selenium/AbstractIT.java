@@ -24,6 +24,10 @@ public abstract class AbstractIT extends TestCase {
 	public URI getWebsiteBaseUrl() {
 		return websiteBaseUrl;
 	}
+	
+	public void setWebsiteBaseUrl(URI uri) {
+		websiteBaseUrl = uri;
+	}
 
 	public WebDriver getDriver() {
 		return driver;

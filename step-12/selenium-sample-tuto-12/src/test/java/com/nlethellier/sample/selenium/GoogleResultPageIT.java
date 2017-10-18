@@ -23,6 +23,7 @@ public class GoogleResultPageIT extends AbstractIT {
 			e.printStackTrace();
 		}
 		googleResultPage = new GoogleResultPage(getDriver(), GOOGLE_BASE_URI);
+		setWebsiteBaseUrl(GOOGLE_BASE_URI);
 	}
 	
 	
