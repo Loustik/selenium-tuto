@@ -3,9 +3,6 @@ package com.nlethellier.sample.selenium;
 import java.net.URI;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class IndexPage extends AbstractPage {
 

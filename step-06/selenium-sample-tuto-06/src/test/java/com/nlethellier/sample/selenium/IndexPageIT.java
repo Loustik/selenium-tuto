@@ -9,27 +9,27 @@ public class IndexPageIT extends AbstractIT {
 
 	@Test
 	public void testWeSeeHelloWorld() {
-		getDrv().get(getSiteBase().toString());
+		getDriver().get(getWebsite().toString());
 
-		new IndexPage(getDrv(), getSiteBase());
+		new IndexPage(getDriver(), getWebsite());
 	}
 	
 	@Test
 	public void testWeSeeLoremIpsum() {
-		getDrv().get(getSiteBase().toString());
-		Assert.assertTrue(getDrv().getPageSource().contains("Lorem Ipsum"));
+		getDriver().get(getWebsite().toString());
+		Assert.assertTrue(getDriver().getPageSource().contains("Lorem Ipsum"));
 	}
 	
 	@Test
 	public void testPageTitle() {
-		getDrv().get(getSiteBase().toString());
-		Assert.assertEquals("Selenium sample tuto", getDrv().getTitle());
+		getDriver().get(getWebsite().toString());
+		Assert.assertEquals("Selenium sample tuto", getDriver().getTitle());
 	}
 	
 	@Test
 	public void testGetElementById() {
-		getDrv().get(getSiteBase().toString());
-		WebElement newParagraph = getDrv().findElement(By.id("new_paragraph"));
+		getDriver().get(getWebsite().toString());
+		WebElement newParagraph = getDriver().findElement(By.id("new_paragraph"));
 		Assert.assertEquals("This is a brand new paragraph", newParagraph.getText());
 	}
 }
