@@ -22,7 +22,7 @@ public class CreateUserResultPage extends AbstractPage {
 	private final WebDriver drv;
 	private final URI siteBase;
 
-	@FindBy(css = "p[name='result']")
+	@FindBy(xpath = "p[name='result']")
 	private WebElement resultSentenceWE;
 
 	public WebElement getResultSentenceWE() {
