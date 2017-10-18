@@ -13,9 +13,7 @@ public class CreateUserResultPageIT extends AbstractIT {
 	
 	@Before
 	public void init() {
-		IndexPage indexPage = new IndexPage(getDriver(), getWebsiteBaseUrl());
-		CreateUserPage createUserPage = indexPage.navigateToCreateUserPage();
-		createUserResultPage = createUserPage.submit("Patrice", "CAINE", "41");
+		createUserResultPage = new IndexPage(getDriver(), getWebsiteBaseUrl()).navigateToCreateUserPage().submit("Patrice", "CAINE", "41");
 	}
 	
 	
