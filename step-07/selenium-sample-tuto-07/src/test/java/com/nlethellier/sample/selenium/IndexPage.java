@@ -21,12 +21,12 @@ public class IndexPage extends AbstractPage {
 	private final WebDriver drv;
 	private final URI siteBase;
 	
-	@FindBy(css = "a[href='send-data.jsp']")
-	private WebElement sendDataLinkWE;
+	@FindBy(css = "a[href='create-user.jsp']")
+	private WebElement createUserLinkWE;
 
 	
-	public WebElement getSendDataLinkWE() {
-		return sendDataLinkWE;
+	public WebElement getCreateUserLinkWE() {
+		return createUserLinkWE;
 	}
 
 	

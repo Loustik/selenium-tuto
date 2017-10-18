@@ -11,7 +11,7 @@
 <body>
     For instance, let's have a form to create dummy users :<br />
     <br />
-	<form method="post" name="send-data-form">
+	<form method="post" name="create-user-form">
 		Firstname: <input name="firstname"/> <br/>
 		Lastname: <input name="lastname"/><br/>
 		Age: <input name="age"/><br/>

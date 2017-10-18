@@ -33,9 +33,9 @@ public class IndexPageIT extends AbstractIT {
 	}
 	
 	@Test
-	public void testFormPageLinkPresence() {
-		Assert.assertNotNull(indexPage.getSendDataLinkWE());
-		Assert.assertEquals("a", indexPage.getSendDataLinkWE().getTagName());
-		Assert.assertEquals("Send data", indexPage.getSendDataLinkWE().getText());
+	public void testCreateUserLinkPresence() {
+		Assert.assertNotNull(indexPage.getCreateUserLinkWE());
+		Assert.assertEquals("a", indexPage.getCreateUserLinkWE().getTagName());
+		Assert.assertEquals("Create user", indexPage.getCreateUserLinkWE().getText());
 	}
 }

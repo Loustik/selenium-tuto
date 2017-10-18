@@ -9,7 +9,7 @@
 	    <header>
 	        <nav class="menu">
 	            <a href="index.jsp" title="Home">Home</a> |
-	            <a href="send-data.jsp">Send data</a>
+	            <a href="create-user.jsp">Create user</a>
 	        </nav>
 	    </header>
 	    <p id='lorem'>Lorem Ipsum bla bla bla...</p>

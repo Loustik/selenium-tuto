@@ -33,15 +33,15 @@ public class IndexPageIT extends AbstractIT {
 	}
 	
 	@Test
-	public void testFormPageLinkPresence() {
-		Assert.assertNotNull(indexPage.getSendDataLinkWE());
-		Assert.assertEquals("a", indexPage.getSendDataLinkWE().getTagName());
-		Assert.assertEquals("Send data", indexPage.getSendDataLinkWE().getText());
+	public void testCreateUserLinkPresence() {
+		Assert.assertNotNull(indexPage.getCreateUserLinkWE());
+		Assert.assertEquals("a", indexPage.getCreateUserLinkWE().getTagName());
+		Assert.assertEquals("Create user", indexPage.getCreateUserLinkWE().getText());
 	}
 	
 	@Test
 	public void testThatShouldFail() {
-		Assert.assertNotNull(indexPage.getSendDataLinkWE());
-		Assert.assertEquals("This is not the link title", indexPage.getSendDataLinkWE().getText());
+		Assert.assertNotNull(indexPage.getCreateUserLinkWE());
+		Assert.assertEquals("This is not the link title", indexPage.getCreateUserLinkWE().getText());
 	}
 }

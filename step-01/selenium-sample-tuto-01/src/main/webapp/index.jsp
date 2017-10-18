@@ -9,10 +9,11 @@
 	    <header>
 	        <nav class="menu">
 	            <a href="index.jsp" title="Home">Home</a> |
-	            <a href="send-data.jsp">Send data</a>
+	            <a href="create-user.jsp">Create user</a>
 	        </nav>
 	    </header>
-	    <p>Lorem Ipsum bla bla bla...</p>
+	    <p id='lorem'>Lorem Ipsum bla bla bla...</p>
+      <p id='new_paragraph'>This is a brand new paragraph</p>
 	    <footer><small>&copy;Selenium makes life easier :)</small></footer>
 	</div>
 </body>
