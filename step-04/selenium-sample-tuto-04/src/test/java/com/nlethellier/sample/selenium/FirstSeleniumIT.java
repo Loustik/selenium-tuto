@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class FirstSeleniumITest extends TestCase{
+public class FirstSeleniumIT extends TestCase{
 	private URI website;
 	private WebDriver driver;
 
