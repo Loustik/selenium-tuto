@@ -24,7 +24,7 @@ public class CreateUserResultPageIT extends AbstractIT {
 	
 	@Test
 	public void testValuesAfterRedirection() {
-		String result = createUserResultPage.getResultSentenceWE().getAttribute("value");
+		String result = createUserResultPage.getResultSentenceWE().getText();
 		Assert.assertThat(result, CoreMatchers.containsString("Patrice CAINE"));
 		Assert.assertThat(result, CoreMatchers.containsString("41 years old"));
 	}
