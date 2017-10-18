@@ -33,10 +33,8 @@ public class CreateUserResultPage extends AbstractPage {
 		if (!isAtCreateUserResultPage(drv, siteBase)) { 
 			throw new IllegalStateException(); 
 		}
-		
 		this.drv = drv;
 		this.siteBase = siteBase;
-
 		PageFactory.initElements(drv, this);
 	}
 
