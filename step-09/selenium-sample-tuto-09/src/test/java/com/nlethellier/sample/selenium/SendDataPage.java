@@ -22,16 +22,16 @@ public class SendDataPage extends AbstractPage {
 	private final WebDriver drv;
 	private final URI siteBase;
 
-	@FindBy(css = "form[name='send-data'] input[name='firstname']")
+	@FindBy(css = "form[name='send-data-form'] input[name='firstname']")
 	private WebElement firstnameWE;
 
-	@FindBy(css = "form[name='send-data'] input[name='lastname']")
+	@FindBy(css = "form[name='send-data-form'] input[name='lastname']")
 	private WebElement lastnameWE;
 
-	@FindBy(css = "form[name='send-data'] input[name='age']")
+	@FindBy(css = "form[name='send-data-form'] input[name='age']")
 	private WebElement ageWE;
 
-	@FindBy(css = "form[name='send-data'] input[type='submit']")
+	@FindBy(css = "form[name='send-data-form'] input[type='submit']")
 	private WebElement submitButtonWE;
 
 	public WebElement getFirstnameWE() {
