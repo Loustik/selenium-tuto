@@ -71,6 +71,11 @@
         			<source>1.7</source>
         			<target>1.7</target>
        			</configuration>
+       			<executions>
+			        <execution>
+			            <phase>verify</phase>
+			        </execution>
+			    </executions>
         	</plugin>
         	
         	<plugin>
@@ -79,79 +84,41 @@
         		<version>2.1.1</version>
         	</plugin>
 
-<!--             <plugin> -->
-<!--                 <groupId>org.codehaus.cargo</groupId> -->
-<!--                 <artifactId>cargo-maven2-plugin</artifactId> -->
-<!--                 <version>1.6.4</version> -->
-<!--                 <executions> -->
-<!--                     <execution> -->
-<!--                         <id>start</id> -->
-<!--                         <phase>pre-integration-test</phase> -->
-<!--                         <goals> -->
-<!--                             <goal>start</goal> -->
-<!--                         </goals> -->
-<!--                     </execution> -->
-<!--                     <execution> -->
-<!--                         <id>stop</id> -->
-<!--                         <phase>post-integration-test</phase> -->
-<!--                         <goals> -->
-<!--                             <goal>stop</goal> -->
-<!--                         </goals> -->
-<!--                     </execution> -->
-<!--                 </executions> -->
-<!--                 <configuration> -->
-<!--                     <type>standalone</type> -->
-<!--                     <configuration> -->
-<!--                         <properties> -->
-<!--                             <cargo.servlet.port>8081</cargo.servlet.port> -->
-<!--                         </properties> -->
-<!--                     </configuration> -->
-<!--                     <deployables> -->
-<!--                     	<deployable> -->
-<!--                     		<location>${project.build.directory}/${project.build.finalName}.${project.packaging}</location> -->
-<!-- 						    <pingURL>http://localhost:8081/selenium-sample-tuto-04</pingURL> -->
-<!--                     	</deployable> -->
-<!--                     </deployables> -->
-<!--                 </configuration> -->
-<!--             </plugin> -->
-            
             <plugin>
-			   <groupId>org.mortbay.jetty</groupId>
-			   <artifactId>maven-jetty-plugin</artifactId>
-			   <version>6.1.10</version>
-			   <configuration>
-			      <scanIntervalSeconds>10</scanIntervalSeconds>
-			      <stopKey>foo</stopKey>
-			      <stopPort>9999</stopPort>
-			      <webAppSourceDirectory>${project.build.directory}</webAppSourceDirectory>
-			      <connectors>
-			         <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
-			            <port>9090</port>
-			            <maxIdleTime>60000</maxIdleTime>
-			         </connector>
-			      </connectors>
-			   </configuration>
-			   <executions>
-			      <execution>
-			         <id>start-jetty</id>
-			         <phase>pre-integration-test</phase>
-			         <goals>
-			            <goal>run</goal>
-			         </goals>
-			         <configuration>
-			            <scanIntervalSeconds>0</scanIntervalSeconds>
-			            <daemon>true</daemon>
-			         </configuration>
-			      </execution>
-			      <execution>
-			         <id>stop-jetty</id>
-			         <phase>post-integration-test</phase>
-			         <goals>
-			            <goal>stop</goal>
-			         </goals>
-			      </execution>
-			   </executions>
-			</plugin>
+                <groupId>org.codehaus.cargo</groupId>
+                <artifactId>cargo-maven2-plugin</artifactId>
+                <version>1.6.4</version>
+                <executions>
+                    <execution>
+                        <id>start</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>start</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>stop</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>stop</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <type>standalone</type>
+                    <configuration>
+                        <properties>
+                            <cargo.servlet.port>8081</cargo.servlet.port>
+                        </properties>
+                    </configuration>
+                    <deployables>
+                    	<deployable>
+                    		<location>${project.build.directory}/${project.build.finalName}.${project.packaging}</location>
+						    <pingURL>http://localhost:8081/selenium-sample-tuto-04</pingURL>
+                    	</deployable>
+                    </deployables>
+                </configuration>
+            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
