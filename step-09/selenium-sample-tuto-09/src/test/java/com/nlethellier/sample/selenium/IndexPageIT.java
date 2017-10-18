@@ -41,8 +41,7 @@ public class IndexPageIT extends AbstractIT {
 	
 	@Test
 	public void testNavigateToSendDataPage() {
-		getDriver().get(getWebsiteBaseUrl().toString());
-		new IndexPage(getDriver(), getWebsiteBaseUrl()).navigateToCreateUserPage();
+		indexPage.navigateToCreateUserPage();
 		assertTrue(CreateUserPage.isAtCreateUserPage(getDriver(), getWebsiteBaseUrl()));
 	}
 }
