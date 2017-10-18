@@ -11,7 +11,7 @@
 <body>
     For instance, let's have a form to create dummy users :<br />
     <br />
-	<form method="post" action="create-user-results" name="create-user-form.jsp">
+	<form method="post" action="create-user-results.jsp" name="create-user-form">
 		Firstname: <input type="text" name="firstname"/> <br/>
 		Lastname: <input type="text" name="lastname"/><br/>
 		Age: <input type="text" name="age"/><br/>
