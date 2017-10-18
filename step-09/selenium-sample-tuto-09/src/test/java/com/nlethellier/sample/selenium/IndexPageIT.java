@@ -12,7 +12,7 @@ public class IndexPageIT extends AbstractIT {
 
 	@Before
 	public void init() {
-		indexPage = new IndexPage(getDriver(), getWebsite());
+		indexPage = new IndexPage(getDriver(), getWebsiteBaseUrl());
 	}
 	
 	
@@ -43,5 +43,12 @@ public class IndexPageIT extends AbstractIT {
 	public void testThatShouldFail() {
 		Assert.assertNotNull(indexPage.getSendDataLinkWE());
 		Assert.assertEquals("This is not the link title", indexPage.getSendDataLinkWE().getText());
+	}
+	
+	@Test
+	public void testNavigateToSendDataPage() {
+		getDriver().get(getWebsiteBaseUrl().toString());
+		new IndexPage(getDriver(), getWebsiteBaseUrl()).navigateToSendDataPage();
+		assertTrue(SendDataPage.isAtSendDataPage(getDriver(), getWebsiteBaseUrl()));
 	}
 }

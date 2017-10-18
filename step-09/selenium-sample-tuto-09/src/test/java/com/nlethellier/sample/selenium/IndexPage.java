@@ -28,6 +28,11 @@ public class IndexPage extends AbstractPage {
 	public WebElement getSendDataLinkWE() {
 		return sendDataLinkWE;
 	}
+	
+	public SendDataPage navigateToSendDataPage() {
+		getSendDataLinkWE().click();
+		return new SendDataPage(drv, siteBase);
+	}
 
 	
 	public IndexPage(WebDriver drv, URI siteBase) {

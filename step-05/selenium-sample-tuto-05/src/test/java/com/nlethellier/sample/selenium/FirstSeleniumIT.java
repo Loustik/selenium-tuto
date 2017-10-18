@@ -24,7 +24,7 @@ public class FirstSeleniumIT extends TestCase{
 	@Autowired
 	private WebDriver driver;
 
-	public URI getWebsite() {
+	public URI getWebsiteBaseUrl() {
 		return website;
 	}
 
@@ -38,7 +38,7 @@ public class FirstSeleniumIT extends TestCase{
 	public void setUp() throws Exception {
 		super.setUp();
 		getDriver().manage().deleteAllCookies();
-		getDriver().get(getWebsite().toString());
+		getDriver().get(getWebsiteBaseUrl().toString());
 	}
 
 	

@@ -12,7 +12,7 @@ public class IndexPageIT extends AbstractIT {
 
 	@Before
 	public void init() {
-		indexPage = new IndexPage(getDriver(), getWebsite());
+		indexPage = new IndexPage(getDriver(), getWebsiteBaseUrl());
 	}
 	
 	

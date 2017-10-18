@@ -16,13 +16,13 @@ import junit.framework.TestCase;
 public abstract class AbstractIT extends TestCase {
 
 	@Autowired
-	private URI website;
+	private URI websiteBaseUrl;
 	
 	@Autowired
 	private WebDriver driver;
 
-	public URI getWebsite() {
-		return website;
+	public URI getWebsiteBaseUrl() {
+		return websiteBaseUrl;
 	}
 
 	public WebDriver getDriver() {
@@ -34,6 +34,6 @@ public abstract class AbstractIT extends TestCase {
 	public void setUp() throws Exception {
 		super.setUp();
 		getDriver().manage().deleteAllCookies();
-		getDriver().get(getWebsite().toString());
+		getDriver().get(getWebsiteBaseUrl().toString());
 	}
 }
