@@ -18,15 +18,17 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations = { "/applicationContext-test.xml" })
 public class FirstSeleniumIT extends TestCase{
 	
-	@Autowired
+	//@Autowired
 	private URI website;
 	
-	@Autowired
+	//@Autowired
 	private WebDriver driver;
 
 	@Override
 	public void setUp() throws Exception {
 		super.setUp();
+		website = new URI("http://localhost:8081/selenium-sample-tuto-05");
+		driver = new FirefoxDriver();
 		driver.get(website.toString());
 	}
 
