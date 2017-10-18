@@ -19,10 +19,14 @@ public class CreateUserResultPageIT extends AbstractIT {
 	
 	@Test
 	public void testRedirectionUrl() {
-//		String result = createUserResultPage.getResultSentenceWE().getAttribute("value");
 		assertTrue(CreateUserResultPage.isAtCreateUserResultPage(getDriver(), getWebsiteBaseUrl()));
-//		Assert.assertThat(result, CoreMatchers.containsString("Patrice CAINE"));
-//		Assert.assertThat(result, CoreMatchers.containsString("41 ans"));
+	}
+	
+	@Test
+	public void testValuesAfterRedirection() {
+		String result = createUserResultPage.getResultSentenceWE().getAttribute("value");
+		Assert.assertThat(result, CoreMatchers.containsString("Patrice CAINE"));
+		Assert.assertThat(result, CoreMatchers.containsString("41 years old"));
 	}
 	
 }
