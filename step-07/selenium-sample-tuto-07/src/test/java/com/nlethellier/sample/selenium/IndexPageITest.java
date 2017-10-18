@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class IndexPageITest extends AbstractITest {
+public class IndexPageITest extends AbstractIT {
 
 	@Test
 	public void testWeSeeHelloWorld() {

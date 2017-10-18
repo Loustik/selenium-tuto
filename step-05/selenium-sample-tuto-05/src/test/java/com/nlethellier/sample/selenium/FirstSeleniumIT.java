@@ -15,7 +15,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "/applicationContext-test.xml" })
-public class FirstSeleniumITest extends TestCase{
+public class FirstSeleniumIT extends TestCase{
 
 	@Autowired
 	private URI siteBase;
