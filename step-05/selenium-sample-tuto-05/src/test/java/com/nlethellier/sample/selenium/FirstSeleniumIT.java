@@ -4,6 +4,7 @@ import java.net.URI;
 import junit.framework.TestCase;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
@@ -33,6 +34,7 @@ public class FirstSeleniumIT extends TestCase{
 	}
 
 
+	@Before
 	@Override
 	public void setUp() throws Exception {
 		super.setUp();
