@@ -16,30 +16,24 @@ import junit.framework.TestCase;
 public abstract class AbstractIT extends TestCase {
 
 	@Autowired
-	private URI siteBase;
-
+	private URI website;
+	
 	@Autowired
-	private WebDriver drv;
+	private WebDriver driver;
 
-	public URI getSiteBase() {
-		return siteBase;
+	public URI getWebsite() {
+		return website;
 	}
 
-	public WebDriver getDrv() {
-		return drv;
+	public WebDriver getDriver() {
+		return driver;
 	}
-
+	
 	@Before
 	@Override
 	public void setUp() throws Exception {
 		super.setUp();
-		getDrv().manage().deleteAllCookies();
-		getDrv().get(siteBase.toString());
-	}
-	
-	@Override
-	public void tearDown() throws Exception {
-		super.tearDown();
-		getDrv().close();
+		getDriver().manage().deleteAllCookies();
+		getDriver().get(getWebsite().toString());
 	}
 }
