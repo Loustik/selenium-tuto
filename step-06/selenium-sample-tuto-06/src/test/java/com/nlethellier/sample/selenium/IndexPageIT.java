@@ -7,12 +7,7 @@ import org.openqa.selenium.WebElement;
 
 public class IndexPageIT extends AbstractIT {
 
-	@Test
-	public void testWeSeeHelloWorld() {
-		getDriver().get(getWebsite().toString());
-
-		new IndexPage(getDriver(), getWebsite());
-	}
+	
 	
 	@Test
 	public void testWeSeeLoremIpsum() {
@@ -29,4 +24,6 @@ public class IndexPageIT extends AbstractIT {
 		WebElement newParagraph = getDriver().findElement(By.id("new_paragraph"));
 		Assert.assertEquals("This is a brand new paragraph", newParagraph.getText());
 	}
+	
+	
 }

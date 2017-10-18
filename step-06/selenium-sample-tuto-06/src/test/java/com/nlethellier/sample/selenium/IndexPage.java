@@ -19,7 +19,10 @@ public class IndexPage extends AbstractPage {
 	private final URI siteBase;
 
 	public IndexPage(WebDriver drv, URI siteBase) {
-		if (!isAtIndexPage(drv, siteBase)) { throw new IllegalStateException(); }
+		if (!isAtIndexPage(drv, siteBase)) { 
+			throw new IllegalStateException(); 
+		}
+		
 		this.drv = drv;
 		this.siteBase = siteBase;
 	}

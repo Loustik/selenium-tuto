@@ -20,14 +20,24 @@ public class IndexPage extends AbstractPage {
 
 	private final WebDriver drv;
 	private final URI siteBase;
-
+	
 	@FindBy(css = "a[href='send-data.jsp']")
 	private WebElement sendDataLinkWE;
 
+	
+	public WebElement getSendDataLinkWE() {
+		return sendDataLinkWE;
+	}
+
+	
 	public IndexPage(WebDriver drv, URI siteBase) {
-		if (!isAtIndexPage(drv, siteBase)) { throw new IllegalStateException(); }
-		PageFactory.initElements(drv, this);
+		if (!isAtIndexPage(drv, siteBase)) { 
+			throw new IllegalStateException(); 
+		}
+		
 		this.drv = drv;
 		this.siteBase = siteBase;
+
+		PageFactory.initElements(drv, this);
 	}
 }
