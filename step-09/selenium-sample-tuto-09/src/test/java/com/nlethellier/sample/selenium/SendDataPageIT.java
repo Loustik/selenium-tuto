@@ -1,9 +1,10 @@
 package com.nlethellier.sample.selenium;
 
-import static org.junit.Assert.*;
+import org.junit.Assert;
 
 import org.junit.Before;
 import org.junit.Test;
+
 
 public class SendDataPageIT extends AbstractIT {
 
@@ -26,12 +27,13 @@ public class SendDataPageIT extends AbstractIT {
 	
 	@Test
 	public void testFillInLastName() {
-		sendDataPage.getFirstnameWE().sendKeys("fillon");
+		sendDataPage.getLastnameWE().sendKeys("fillon");
 	}
 	
 	@Test
 	public void testFillInAge() {
-		sendDataPage.getFirstnameWE().sendKeys("46");
+		sendDataPage.getAgeWE().sendKeys("46");
+		Assert.assertEquals("46", sendDataPage.getAgeWE().getText());
 	}
 
 }
