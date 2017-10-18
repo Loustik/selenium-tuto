@@ -23,7 +23,7 @@
         </dependency>
     </dependencies>
 
-		
+
     <build>
         <finalName>${project.artifactId}</finalName>
 
@@ -47,7 +47,7 @@
             <plugin>
                 <groupId>org.codehaus.cargo</groupId>
                 <artifactId>cargo-maven2-plugin</artifactId>
-                <version>1.2.0</version>
+                <version>1.6.4</version>
                 <executions>
                     <execution>
                         <id>start</id>

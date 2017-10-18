@@ -8,12 +8,15 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 	<title>Send data using a HTML form</title>
 </head>
-<body align='center'>
-	<form method="post" name="send-data">
+<body>
+  <span align='center'>
+    For instance, let's have a form to create dummy users :
+	<form method="post" name="send-data-form">
 		Firstname: <input name="firstname"/> <br/>
 		Lastname: <input name="lastname"/><br/>
 		Age: <input name="age"/><br/>
 		<input type="submit" value='Send all data'/>
 	</form>
+</span>
 </body>
 </html>
