@@ -15,10 +15,6 @@ public class CreateUserPageIT extends AbstractIT {
 		createUserPage = new IndexPage(getDriver(), getWebsiteBaseUrl()).navigateToCreateUserPage();
 	}
 	
-//	@Test
-//	public void testSubmit() {
-//		sendDataPage.submit("penelope", "fillon", "46");
-//	}
 	
 	@Test
 	public void testFillInFirstName() {
