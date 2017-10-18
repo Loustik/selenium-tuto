@@ -15,7 +15,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "/applicationContext-test.xml" })
-public class FirstSeleniumIT extends TestCase{
+public class FirstSeleniumIT extends TestCase {
 
 	@Autowired
 	private URI siteBase;
@@ -38,11 +38,11 @@ public class FirstSeleniumIT extends TestCase{
 		getDrv().get(siteBase.toString());
 	}
 	
-	@Override
-	public void tearDown() throws Exception {
-		super.tearDown();
-		getDrv().close();
-	}
+//	@Override
+//	public void tearDown() throws Exception {
+//		super.tearDown();
+//		getDrv().close();
+//	}
 	
 	
 	@Test
