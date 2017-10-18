@@ -22,16 +22,16 @@ public class IndexPage extends AbstractPage {
 	private final URI siteBase;
 	
 	@FindBy(css = "a[href='send-data.jsp']")
-	private WebElement sendDataLinkWE;
+	private WebElement createUserLinkWE;
 
 	
-	public WebElement getSendDataLinkWE() {
-		return sendDataLinkWE;
+	public WebElement getCreateUserLinkWE() {
+		return createUserLinkWE;
 	}
 	
-	public SendDataPage navigateToSendDataPage() {
-		getSendDataLinkWE().click();
-		return new SendDataPage(drv, siteBase);
+	public CreateUserPage navigateToCreateUserPage() {
+		getCreateUserLinkWE().click();
+		return new CreateUserPage(drv, siteBase);
 	}
 
 	

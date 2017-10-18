@@ -33,22 +33,16 @@ public class IndexPageIT extends AbstractIT {
 	}
 	
 	@Test
-	public void testFormPageLinkPresence() {
-		Assert.assertNotNull(indexPage.getSendDataLinkWE());
-		Assert.assertEquals("a", indexPage.getSendDataLinkWE().getTagName());
-		Assert.assertEquals("Send data", indexPage.getSendDataLinkWE().getText());
-	}
-	
-	@Test
-	public void testThatShouldFail() {
-		Assert.assertNotNull(indexPage.getSendDataLinkWE());
-		Assert.assertEquals("This is not the link title", indexPage.getSendDataLinkWE().getText());
+	public void testCreateUserLinkPresence() {
+		Assert.assertNotNull(indexPage.getCreateUserLinkWE());
+		Assert.assertEquals("a", indexPage.getCreateUserLinkWE().getTagName());
+		Assert.assertEquals("Create user", indexPage.getCreateUserLinkWE().getText());
 	}
 	
 	@Test
 	public void testNavigateToSendDataPage() {
 		getDriver().get(getWebsiteBaseUrl().toString());
-		new IndexPage(getDriver(), getWebsiteBaseUrl()).navigateToSendDataPage();
-		assertTrue(SendDataPage.isAtSendDataPage(getDriver(), getWebsiteBaseUrl()));
+		new IndexPage(getDriver(), getWebsiteBaseUrl()).navigateToCreateUserPage();
+		assertTrue(CreateUserPage.isAtCreateUserPage(getDriver(), getWebsiteBaseUrl()));
 	}
 }
