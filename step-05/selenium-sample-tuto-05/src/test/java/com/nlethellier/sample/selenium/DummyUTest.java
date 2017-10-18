@@ -12,11 +12,11 @@ public class DummyUTest {
 	}
 
 	@Rule
-  public ExpectedException thrown = ExpectedException.none();
+	public ExpectedException thrown = ExpectedException.none();
 
 	@Test
-	public void testSum() {
+	public void testSumMethod() {
 		MyMathApplication math = new MyMathApplication();
-		Assert.assertEquals(math.sum(5, 2), 7);
+		Assert.assertEquals(7, math.sum(5, 2));
 	}
 }
