@@ -9,14 +9,14 @@
 	<title>Send data using a HTML form</title>
 </head>
 <body>
-  <span align='center'>
-    For instance, let's have a form to create dummy users :
+    For instance, let's have a form to create dummy users :<br />
+    <br />
 	<form method="post" name="send-data-form">
 		Firstname: <input name="firstname"/> <br/>
 		Lastname: <input name="lastname"/><br/>
 		Age: <input name="age"/><br/>
+    <br />
 		<input type="submit" value='Send all data'/>
 	</form>
-</span>
 </body>
 </html>
