@@ -51,9 +51,9 @@ public class SendDataPage extends AbstractPage {
 	}
 
 	public SendDataPage(WebDriver drv, URI siteBase) {
-//		if (!isAtSendDataPage(drv, siteBase)) { 
-//			throw new IllegalStateException(); 
-//		}
+		if (!isAtSendDataPage(drv, siteBase)) { 
+			throw new IllegalStateException(); 
+		}
 		
 		this.drv = drv;
 		this.siteBase = siteBase;

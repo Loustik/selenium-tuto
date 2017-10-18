@@ -11,7 +11,7 @@ public class SendDataPageIT extends AbstractIT {
 	
 	@Before
 	public void init() {
-		sendDataPage = new SendDataPage(getDriver(), getWebsiteBaseUrl());
+		sendDataPage = new IndexPage(getDriver(), getWebsiteBaseUrl()).navigateToSendDataPage();
 	}
 	
 //	@Test
