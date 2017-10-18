@@ -61,11 +61,11 @@ public class CreateUserPage extends AbstractPage {
 		PageFactory.initElements(drv, this);
 	}
 
-//	public SendDataPage submit(String firstname, String lastname, String age) {
-//		firstnameWE.sendKeys(firstname);
-//		lastnameWE.sendKeys(lastname);
-//		ageWE.sendKeys(age);
-//		submitButtonWE.click();
-//		return new SendDataPage(drv, siteBase);
-//	}
+	public CreateUserPage submit(String firstname, String lastname, String age) {
+		firstnameWE.sendKeys(firstname);
+		lastnameWE.sendKeys(lastname);
+		ageWE.sendKeys(age);
+		submitButtonWE.click();
+		return new CreateUserPage(drv, siteBase);
+	}
 }

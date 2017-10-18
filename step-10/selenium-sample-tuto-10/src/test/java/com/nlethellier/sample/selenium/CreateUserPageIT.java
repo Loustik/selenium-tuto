@@ -15,10 +15,6 @@ public class CreateUserPageIT extends AbstractIT {
 		createUserPage = new IndexPage(getDriver(), getWebsiteBaseUrl()).navigateToCreateUserPage();
 	}
 	
-//	@Test
-//	public void testSubmit() {
-//		sendDataPage.submit("penelope", "fillon", "46");
-//	}
 	
 	@Test
 	public void testFillInFirstName() {
@@ -38,4 +34,9 @@ public class CreateUserPageIT extends AbstractIT {
 		Assert.assertEquals("46", createUserPage.getAgeWE().getAttribute("value"));
 	}
 
+	@Test
+	public void testSubmit() {
+		createUserPage.submit("jean-pierre", "FOUCAULT", "12 ans");
+	}
 }
+
