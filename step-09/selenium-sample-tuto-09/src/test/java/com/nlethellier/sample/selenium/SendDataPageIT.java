@@ -33,7 +33,7 @@ public class SendDataPageIT extends AbstractIT {
 	@Test
 	public void testFillInAge() {
 		sendDataPage.getAgeWE().sendKeys("46");
-		Assert.assertEquals("46", sendDataPage.getAgeWE().getText());
+		Assert.assertEquals("46", sendDataPage.getAgeWE().getAttribute("value"));
 	}
 
 }
