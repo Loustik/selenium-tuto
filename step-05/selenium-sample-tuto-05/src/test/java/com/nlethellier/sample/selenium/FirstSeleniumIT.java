@@ -17,7 +17,7 @@ public class FirstSeleniumIT extends TestCase{
 	@Override
 	public void setUp() throws Exception {
 		super.setUp();
-		website = new URI("http://localhost:8081/selenium-sample-tuto-04");
+		website = new URI("http://localhost:8081/selenium-sample-tuto-05");
 		driver = new FirefoxDriver();
 	}
 
