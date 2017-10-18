@@ -24,6 +24,15 @@ public class FirstSeleniumIT extends TestCase{
 	@Autowired
 	private WebDriver driver;
 
+	public URI getWebsite() {
+		return website;
+	}
+
+	public WebDriver getDriver() {
+		return driver;
+	}
+
+
 	@Override
 	public void setUp() throws Exception {
 		super.setUp();
@@ -38,20 +47,20 @@ public class FirstSeleniumIT extends TestCase{
 	
 	@Test
 	public void testWeSeeLoremIpsum() {
-		driver.get(website.toString());
-		Assert.assertTrue(driver.getPageSource().contains("Lorem Ipsum"));
+		getDriver().get(getWebsite().toString());
+		Assert.assertTrue(getDriver().getPageSource().contains("Lorem Ipsum"));
 	}
 	
 	@Test
 	public void testPageTitle() {
-		driver.get(website.toString());
-		Assert.assertEquals("Selenium sample tuto", driver.getTitle());
+		getDriver().get(getWebsite().toString());
+		Assert.assertEquals("Selenium sample tuto", getDriver().getTitle());
 	}
 	
 	@Test
 	public void testGetElementById() {
-		driver.get(website.toString());
-		WebElement newParagraph = driver.findElement(By.id("new_paragraph"));
+		getDriver().get(getWebsite().toString());
+		WebElement newParagraph = getDriver().findElement(By.id("new_paragraph"));
 		Assert.assertEquals("This is a brand new paragraph", newParagraph.getText());
 	}
 	
