@@ -5,7 +5,7 @@
            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 	<bean id="siteBase" class="java.net.URI">
-		<constructor-arg value="http://localhost:8081/${project.artifactId}/" />
+		<constructor-arg value="http://localhooooooooost:8081/${project.artifactId}/" />
 	</bean>
 
 	<bean id="drv" class="org.openqa.selenium.firefox.FirefoxDriver" destroy-method="quit"/>
