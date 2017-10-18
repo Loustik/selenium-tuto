@@ -1,16 +1,17 @@
 package com.nlethellier.sample.selenium;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 
 public class IndexPageIT extends AbstractIT {
 
 	private IndexPage indexPage;
 
-	public void IndexPageIT() {
+	@Before
+	public void init() {
 		indexPage = new IndexPage(getDriver(), getWebsite());
 	}
 	
