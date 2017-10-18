@@ -71,11 +71,6 @@
         			<source>1.7</source>
         			<target>1.7</target>
        			</configuration>
-       			<executions>
-			        <execution>
-			            <phase>verify</phase>
-			        </execution>
-			    </executions>
         	</plugin>
         	
         	<plugin>
@@ -111,12 +106,12 @@
                             <cargo.servlet.port>8081</cargo.servlet.port>
                         </properties>
                     </configuration>
-                    <deployables>
-                    	<deployable>
-                    		<location>${project.build.directory}/${project.build.finalName}.${project.packaging}</location>
-						    <pingURL>http://localhost:8081/selenium-sample-tuto-04</pingURL>
-                    	</deployable>
-                    </deployables>
+<!--                     <deployables> -->
+<!--                     	<deployable> -->
+<!--                     		<location>${project.build.directory}/${project.build.finalName}.${project.packaging}</location> -->
+<!-- 						    <pingURL>http://localhost:8081/selenium-sample-tuto-04</pingURL> -->
+<!--                     	</deployable> -->
+<!--                     </deployables> -->
                 </configuration>
             </plugin>
 
